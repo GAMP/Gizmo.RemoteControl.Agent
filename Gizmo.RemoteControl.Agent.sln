@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gizmo.RemoteControl.Agent.Shared", "Gizmo.RemoteControl.Agent.Shared\Gizmo.RemoteControl.Agent.Shared.csproj", "{C1E1540A-F01C-47D1-B121-C335E3CF899E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gizmo.RemoteControl.Agent.Windows", "Gizmo.RemoteControl.Agent.Windows\Gizmo.RemoteControl.Agent.Windows.csproj", "{0CB75677-7025-46F3-9BF8-84300E48CEF9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gizmo.RemoteControl.Agent.Windows.Headless", "Gizmo.RemoteControl.Agent.Windows.Headless\Gizmo.RemoteControl.Agent.Windows.Headless.csproj", "{944C7810-4E93-453A-8D30-729863BF1209}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{E1E384E2-92D8-4AEE-85F4-63FDE1CEFD0A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gizmo.RemoteControl.Shared", "Submodules\Gizmo.RemoteControl.Shared\Gizmo.RemoteControl.Shared.csproj", "{795D9FD0-3D5F-449E-8BC8-004F9DE2D2EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1E1540A-F01C-47D1-B121-C335E3CF899E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1E1540A-F01C-47D1-B121-C335E3CF899E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1E1540A-F01C-47D1-B121-C335E3CF899E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1E1540A-F01C-47D1-B121-C335E3CF899E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CB75677-7025-46F3-9BF8-84300E48CEF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CB75677-7025-46F3-9BF8-84300E48CEF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CB75677-7025-46F3-9BF8-84300E48CEF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CB75677-7025-46F3-9BF8-84300E48CEF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{944C7810-4E93-453A-8D30-729863BF1209}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{944C7810-4E93-453A-8D30-729863BF1209}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{944C7810-4E93-453A-8D30-729863BF1209}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{944C7810-4E93-453A-8D30-729863BF1209}.Release|Any CPU.Build.0 = Release|Any CPU
+		{795D9FD0-3D5F-449E-8BC8-004F9DE2D2EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{795D9FD0-3D5F-449E-8BC8-004F9DE2D2EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{795D9FD0-3D5F-449E-8BC8-004F9DE2D2EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{795D9FD0-3D5F-449E-8BC8-004F9DE2D2EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{795D9FD0-3D5F-449E-8BC8-004F9DE2D2EF} = {E1E384E2-92D8-4AEE-85F4-63FDE1CEFD0A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A4BFD09-16CE-4B42-9505-6D6F93C4D18B}
+	EndGlobalSection
+EndGlobal

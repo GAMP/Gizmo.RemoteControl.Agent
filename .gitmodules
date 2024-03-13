@@ -1,0 +1,3 @@
+[submodule "Submodules/Gizmo.RemoteControl.Shared"]
+	path = Submodules/Gizmo.RemoteControl.Shared
+	url = https://github.com/GAMP/Gizmo.RemoteControl.Shared.git
