@@ -1,7 +1,7 @@
 ﻿using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
 using Gizmo.RemoteControl.Shared.Models;
 
-namespace Agent.Headless;
+namespace Gizmo.RemoteControl.Desktop.Windows.Services;
 
 internal class BrandingProvider : IBrandingProvider
 {

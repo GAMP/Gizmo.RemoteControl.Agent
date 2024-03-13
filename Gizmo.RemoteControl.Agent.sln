@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{E1E384
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gizmo.RemoteControl.Shared", "Submodules\Gizmo.RemoteControl.Shared\Gizmo.RemoteControl.Shared.csproj", "{795D9FD0-3D5F-449E-8BC8-004F9DE2D2EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gizmo.RemoteControl.Agent.Windows.Headless.Host", "Gizmo.RemoteControl.Agent.Windows.Headless.Host\Gizmo.RemoteControl.Agent.Windows.Headless.Host.csproj", "{B8F78976-EF1D-4D3E-A075-C67EFDE6129B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{795D9FD0-3D5F-449E-8BC8-004F9DE2D2EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{795D9FD0-3D5F-449E-8BC8-004F9DE2D2EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{795D9FD0-3D5F-449E-8BC8-004F9DE2D2EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8F78976-EF1D-4D3E-A075-C67EFDE6129B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8F78976-EF1D-4D3E-A075-C67EFDE6129B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8F78976-EF1D-4D3E-A075-C67EFDE6129B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F78976-EF1D-4D3E-A075-C67EFDE6129B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

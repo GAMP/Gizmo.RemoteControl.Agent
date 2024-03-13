@@ -9,10 +9,9 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Runtime.Versioning;
 using Microsoft.Extensions.Logging;
 using Agent.Headless.Services;
-using Gizmo.RemoteControl.Desktop.Windows.Services;
 using Microsoft.Extensions.Hosting;
 
-namespace Agent.Headless;
+namespace Gizmo.RemoteControl.Desktop.Windows.Services;
 
 [SupportedOSPlatform("windows")]
 public static class Extensions

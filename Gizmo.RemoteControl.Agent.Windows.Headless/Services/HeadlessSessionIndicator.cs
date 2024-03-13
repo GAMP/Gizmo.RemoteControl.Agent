@@ -1,6 +1,6 @@
 ﻿using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
 
-namespace Agent.Headless.Services;
+namespace Gizmo.RemoteControl.Desktop.Windows.Services;
 
 internal class HeadlessSessionIndicator : ISessionIndicator
 {

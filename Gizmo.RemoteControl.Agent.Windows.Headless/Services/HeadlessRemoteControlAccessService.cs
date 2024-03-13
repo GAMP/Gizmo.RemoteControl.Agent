@@ -2,7 +2,7 @@
 using Gizmo.RemoteControl.Shared.Enums;
 using Microsoft.Extensions.Logging;
 
-namespace Agent.Headless.Services;
+namespace Gizmo.RemoteControl.Desktop.Windows.Services;
 
 public class HeadlessRemoteControlAccessService : IRemoteControlAccessService
 {

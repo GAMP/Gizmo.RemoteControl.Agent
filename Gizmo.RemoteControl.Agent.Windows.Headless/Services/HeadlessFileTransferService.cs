@@ -7,7 +7,7 @@ using System.Runtime.Versioning;
 using System.Security.AccessControl;
 using System.Security.Principal;
 
-namespace Agent.Headless.Services;
+namespace Gizmo.RemoteControl.Desktop.Windows.Services;
 
 public class HeadlessFileTransferService : IFileTransferService
 {
