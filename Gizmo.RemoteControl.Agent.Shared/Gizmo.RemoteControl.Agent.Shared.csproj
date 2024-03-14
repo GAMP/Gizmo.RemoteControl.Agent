@@ -25,7 +25,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Submodules\Gizmo.RemoteControl.Shared\Gizmo.RemoteControl.Shared.csproj" />
+	  <ProjectReference Include="..\..\Gizmo.RemoteControl.Shared\Gizmo.RemoteControl.Shared.csproj" />
 	</ItemGroup>
 
 </Project>
