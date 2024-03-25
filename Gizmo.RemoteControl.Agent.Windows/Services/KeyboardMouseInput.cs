@@ -1,17 +1,19 @@
-﻿using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
-using Gizmo.RemoteControl.Desktop.Shared.Enums;
-using Gizmo.RemoteControl.Desktop.Shared.Native.Windows;
-using Gizmo.RemoteControl.Desktop.Shared.Services;
-using Microsoft.Extensions.Hosting;
+﻿using Gizmo.RemoteControl.Agent.Shared.Abstractions;
+using Gizmo.RemoteControl.Agent.Shared.Enums;
+using Gizmo.RemoteControl.Agent.Shared.Native.Windows;
+using Gizmo.RemoteControl.Agent.Shared.Services;
+
 using Microsoft.Extensions.Logging;
+
 using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 using System.Runtime.Versioning;
-using static Gizmo.RemoteControl.Desktop.Shared.Native.Windows.User32;
 
-namespace Gizmo.RemoteControl.Desktop.Windows.Services;
+using static Gizmo.RemoteControl.Agent.Shared.Native.Windows.User32;
+
+namespace Gizmo.RemoteControl.Agent.Windows.Services;
 
 [SupportedOSPlatform("windows")]
 public class KeyboardMouseInput : IKeyboardMouseInput

@@ -1,9 +1,10 @@
-﻿using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
+﻿using Gizmo.RemoteControl.Agent.Shared.Abstractions;
 using Gizmo.RemoteControl.Shared.Services;
+
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Services;
+namespace Gizmo.RemoteControl.Agent.Shared.Services;
 
 public interface IViewerFactory
 {

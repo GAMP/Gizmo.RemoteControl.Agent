@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Hosting;
-
-namespace Gizmo.RemoteControl.Agent.Windows.Services.Headless;
+﻿namespace Gizmo.RemoteControl.Agent.Windows.Services.Headless;
 internal class HostApplicationLifetime : IHostApplicationLifetime
 {
     public CancellationToken ApplicationStopped => CancellationToken.None;

@@ -1,9 +1,10 @@
-using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
-using Microsoft.AspNetCore.SignalR.Client;
+using Gizmo.RemoteControl.Agent.Shared.Abstractions;
+
 using Microsoft.Extensions.Logging;
+
 using System.Timers;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Services;
+namespace Gizmo.RemoteControl.Agent.Shared.Services;
 
 public interface IIdleTimer
 {

@@ -1,2 +1,2 @@
-﻿namespace Gizmo.RemoteControl.Desktop.Shared.Messages;
+﻿namespace Gizmo.RemoteControl.Agent.Shared.Messages;
 public record DisplaySettingsChangedMessage();

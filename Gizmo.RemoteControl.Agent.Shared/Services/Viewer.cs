@@ -1,15 +1,15 @@
 ﻿using System.Collections.Concurrent;
-using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
 using Gizmo.RemoteControl.Shared.Models;
 using Microsoft.Extensions.Logging;
 using Gizmo.RemoteControl.Shared.Helpers;
 using Gizmo.RemoteControl.Shared.Models.Dtos;
-using Gizmo.RemoteControl.Desktop.Shared.ViewModels;
 using Microsoft.AspNetCore.SignalR.Client;
 using Gizmo.RemoteControl.Shared.Services;
-using Gizmo.RemoteControl.Desktop.Shared.Native.Windows;
+using Gizmo.RemoteControl.Agent.Shared.Native.Windows;
+using Gizmo.RemoteControl.Agent.Shared.Abstractions;
+using Gizmo.RemoteControl.Agent.Shared.ViewModels;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Services;
+namespace Gizmo.RemoteControl.Agent.Shared.Services;
 
 public interface IViewer : IDisposable
 {
@@ -355,7 +355,7 @@ public class Viewer : IViewer
             if (!_desktopHubConnection.IsConnected)
             {
                 _logger.LogWarning(
-                    "Unable to send DTO type {type} because the app is disconnected from the server.", 
+                    "Unable to send DTO type {type} because the app is disconnected from the server.",
                     type);
                 return;
             }
@@ -367,7 +367,7 @@ public class Viewer : IViewer
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error while sending DTO type {type} to viewer connection ID {viewerId}.", 
+            _logger.LogError(ex, "Error while sending DTO type {type} to viewer connection ID {viewerId}.",
                 type,
                 viewerConnectionId);
         }

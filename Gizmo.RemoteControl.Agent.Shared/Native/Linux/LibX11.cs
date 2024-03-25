@@ -26,7 +26,7 @@ in this Software without prior written authorization from The Open Group.
 
 using System.Runtime.InteropServices;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Native.Linux;
+namespace Gizmo.RemoteControl.Agent.Shared.Native.Linux;
 
 public static unsafe class LibX11
 {

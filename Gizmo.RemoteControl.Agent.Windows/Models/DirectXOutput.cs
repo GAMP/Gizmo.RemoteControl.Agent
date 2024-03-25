@@ -1,9 +1,11 @@
 ﻿using Gizmo.RemoteControl.Shared.Helpers;
+
 using SharpDX.Direct3D11;
 using SharpDX.DXGI;
+
 using System.Drawing;
 
-namespace Gizmo.RemoteControl.Desktop.Windows.Models;
+namespace Gizmo.RemoteControl.Agent.Windows.Models;
 
 public class DirectXOutput : IDisposable
 {

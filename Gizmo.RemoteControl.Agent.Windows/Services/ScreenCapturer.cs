@@ -21,15 +21,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-using Gizmo.RemoteControl.Desktop.Windows.Helpers;
-using Gizmo.RemoteControl.Desktop.Windows.Models;
-using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
-using Gizmo.RemoteControl.Desktop.Shared.Messages;
-using Gizmo.RemoteControl.Desktop.Shared.Native.Windows;
-using Gizmo.RemoteControl.Desktop.Shared.Services;
 using Gizmo.RemoteControl.Shared;
 using Gizmo.RemoteControl.Shared.Models;
-using Immense.SimpleMessenger;
 using Microsoft.Extensions.Logging;
 using SharpDX;
 using SharpDX.Direct3D11;
@@ -43,8 +36,14 @@ using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 using System.Runtime.Versioning;
 using Result = Gizmo.RemoteControl.Shared.Result;
+using Gizmo.RemoteControl.Agent.Windows.Models;
+using Gizmo.RemoteControl.Agent.Windows.Helpers;
+using Gizmo.RemoteControl.Agent.Shared.Messages;
+using Gizmo.RemoteControl.Agent.Shared.Native.Windows;
+using Gizmo.RemoteControl.Agent.Shared.Services;
+using Gizmo.RemoteControl.Agent.Shared.Abstractions;
 
-namespace Gizmo.RemoteControl.Desktop.Windows.Services;
+namespace Gizmo.RemoteControl.Agent.Windows.Services;
 
 [SupportedOSPlatform("windows")]
 public class ScreenCapturer : IScreenCapturer
@@ -310,7 +309,7 @@ public class ScreenCapturer : IScreenCapturer
                 return DxCaptureResult.NoAccumulatedFrames(result);
             }
 
-            using Texture2D screenTexture2D = screenResource.QueryInterface<Texture2D>();
+            using var screenTexture2D = screenResource.QueryInterface<Texture2D>();
             device.ImmediateContext.CopyResource(screenTexture2D, texture2D);
             var dataBox = device.ImmediateContext.MapSubresource(texture2D, 0, MapMode.Read, SharpDX.Direct3D11.MapFlags.None);
             using var bitmap = new Bitmap(bounds.Width, bounds.Height, PixelFormat.Format32bppArgb);
@@ -458,7 +457,7 @@ public class ScreenCapturer : IScreenCapturer
         {
             unsafe
             {
-                byte* scan = (byte*)bitmap.GetPixels();
+                var scan = (byte*)bitmap.GetPixels();
 
                 for (var row = 0; row < height; row++)
                 {
@@ -466,7 +465,7 @@ public class ScreenCapturer : IScreenCapturer
                     {
                         var index = row * width * bytesPerPixel + column * bytesPerPixel;
 
-                        byte* data = scan + index;
+                        var data = scan + index;
 
                         for (var i = 0; i < bytesPerPixel; i++)
                         {

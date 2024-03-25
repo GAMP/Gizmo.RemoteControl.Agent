@@ -1,6 +1,6 @@
 ﻿using Gizmo.RemoteControl.Shared.Models;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Abstractions;
+namespace Gizmo.RemoteControl.Agent.Shared.Abstractions;
 
 public interface IChatUiService
 {

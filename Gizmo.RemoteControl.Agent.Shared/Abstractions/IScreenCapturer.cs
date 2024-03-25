@@ -1,8 +1,10 @@
 ﻿using Gizmo.RemoteControl.Shared;
+
 using SkiaSharp;
+
 using System.Drawing;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Abstractions;
+namespace Gizmo.RemoteControl.Agent.Shared.Abstractions;
 
 public interface IScreenCapturer : IDisposable
 {

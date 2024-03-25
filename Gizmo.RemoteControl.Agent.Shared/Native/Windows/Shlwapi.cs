@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Native.Windows;
+namespace Gizmo.RemoteControl.Agent.Shared.Native.Windows;
 
 // https://docs.microsoft.com/en-us/windows/win32/api/shlwapi/nf-shlwapi-isos
 public class Shlwapi

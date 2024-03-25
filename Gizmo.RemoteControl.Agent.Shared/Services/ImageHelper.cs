@@ -1,10 +1,12 @@
-﻿using Gizmo.RemoteControl.Desktop.Shared.Extensions;
+﻿using Gizmo.RemoteControl.Agent.Shared.Extensions;
 using Gizmo.RemoteControl.Shared;
+
 using Microsoft.Extensions.Logging;
 using Microsoft.IO;
+
 using SkiaSharp;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Services;
+namespace Gizmo.RemoteControl.Agent.Shared.Services;
 
 public interface IImageHelper
 {
@@ -74,19 +76,19 @@ public class ImageHelper : IImageHelper
 
             unsafe
             {
-                byte* scan1 = (byte*)currentFrame.GetPixels().ToPointer();
-                byte* scan2 = (byte*)previousFrame.GetPixels().ToPointer();
-                byte* scan3 = (byte*)diffFrame.GetPixels().ToPointer();
+                var scan1 = (byte*)currentFrame.GetPixels().ToPointer();
+                var scan2 = (byte*)previousFrame.GetPixels().ToPointer();
+                var scan3 = (byte*)diffFrame.GetPixels().ToPointer();
 
                 for (var row = 0; row < height; row++)
                 {
                     for (var column = 0; column < width; column++)
                     {
-                        var index = (row * width * bytesPerPixel) + (column * bytesPerPixel);
+                        var index = row * width * bytesPerPixel + column * bytesPerPixel;
 
-                        byte* data1 = scan1 + index;
-                        byte* data2 = scan2 + index;
-                        byte* data3 = scan3 + index;
+                        var data1 = scan1 + index;
+                        var data2 = scan2 + index;
+                        var data3 = scan3 + index;
 
                         if (data1[0] != data2[0] ||
                             data1[1] != data2[1] ||
@@ -142,27 +144,27 @@ public class ImageHelper : IImageHelper
 
             var width = currentFrame.Width;
             var height = currentFrame.Height;
-            int left = int.MaxValue;
-            int top = int.MaxValue;
-            int right = int.MinValue;
-            int bottom = int.MinValue;
+            var left = int.MaxValue;
+            var top = int.MaxValue;
+            var right = int.MinValue;
+            var bottom = int.MinValue;
 
             var bytesPerPixel = currentFrame.BytesPerPixel;
             var totalSize = currentFrame.ByteCount;
 
             unsafe
             {
-                byte* scan1 = (byte*)currentFrame.GetPixels().ToPointer();
-                byte* scan2 = (byte*)previousFrame.GetPixels().ToPointer();
+                var scan1 = (byte*)currentFrame.GetPixels().ToPointer();
+                var scan2 = (byte*)previousFrame.GetPixels().ToPointer();
 
                 for (var row = 0; row < height; row++)
                 {
                     for (var column = 0; column < width; column++)
                     {
-                        var index = (row * width * bytesPerPixel) + (column * bytesPerPixel);
+                        var index = row * width * bytesPerPixel + column * bytesPerPixel;
 
-                        byte* data1 = scan1 + index;
-                        byte* data2 = scan2 + index;
+                        var data1 = scan1 + index;
+                        var data2 = scan2 + index;
 
                         if (data1[0] != data2[0] ||
                             data1[1] != data2[1] ||

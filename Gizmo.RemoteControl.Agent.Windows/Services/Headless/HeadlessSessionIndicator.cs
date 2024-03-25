@@ -1,4 +1,4 @@
-﻿using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
+﻿using Gizmo.RemoteControl.Agent.Shared.Abstractions;
 
 namespace Gizmo.RemoteControl.Agent.Windows.Services.Headless;
 

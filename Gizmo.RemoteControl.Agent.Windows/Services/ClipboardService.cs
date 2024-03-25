@@ -1,9 +1,9 @@
-using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
+using Gizmo.RemoteControl.Agent.Shared.Abstractions;
 using Gizmo.RemoteControl.Desktop.Windows.Helpers;
-using Microsoft.Extensions.Hosting;
+
 using Microsoft.Extensions.Logging;
 
-namespace Agent.Headless.Services;
+namespace Gizmo.RemoteControl.Agent.Windows.Services;
 
 public class ClipboardService : IClipboardService
 {
@@ -40,7 +40,7 @@ public class ClipboardService : IClipboardService
         try
         {
             ClipboardHelper.SetText(clipboardText);
-            
+
         }
         catch (Exception ex)
         {

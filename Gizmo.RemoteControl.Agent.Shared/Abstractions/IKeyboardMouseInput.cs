@@ -1,7 +1,7 @@
-﻿using Gizmo.RemoteControl.Desktop.Shared.Enums;
-using Gizmo.RemoteControl.Desktop.Shared.Services;
+﻿using Gizmo.RemoteControl.Agent.Shared.Enums;
+using Gizmo.RemoteControl.Agent.Shared.Services;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Abstractions;
+namespace Gizmo.RemoteControl.Agent.Shared.Abstractions;
 
 public interface IKeyboardMouseInput
 {

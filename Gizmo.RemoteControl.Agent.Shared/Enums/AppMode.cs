@@ -1,4 +1,4 @@
-﻿namespace Gizmo.RemoteControl.Desktop.Shared.Enums;
+﻿namespace Gizmo.RemoteControl.Agent.Shared.Enums;
 
 public enum AppMode
 {

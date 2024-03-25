@@ -1,11 +1,11 @@
-using Gizmo.RemoteControl.Desktop.Shared.Messages;
+﻿using Gizmo.RemoteControl.Agent.Shared.Messages;
 using Gizmo.RemoteControl.Shared.Models;
 using Microsoft.Extensions.Logging;
-using Immense.SimpleMessenger;
 using System.Collections.Concurrent;
-using Gizmo.RemoteControl.Desktop.Shared.Enums;
+using Gizmo.RemoteControl.Agent.Shared.Enums;
+using Gizmo.RemoteControl.Agent.Shared.Abstractions;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Services;
+namespace Gizmo.RemoteControl.Agent.Shared.Services;
 
 public interface IAppState
 {

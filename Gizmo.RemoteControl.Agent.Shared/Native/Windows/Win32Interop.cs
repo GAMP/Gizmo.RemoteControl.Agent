@@ -1,14 +1,13 @@
 using Gizmo.RemoteControl.Shared.Models;
-using System;
-using System.Collections.Generic;
+
 using System.Diagnostics;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
-using static Gizmo.RemoteControl.Desktop.Shared.Native.Windows.ADVAPI32;
-using static Gizmo.RemoteControl.Desktop.Shared.Native.Windows.User32;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Native.Windows;
+using static Gizmo.RemoteControl.Agent.Shared.Native.Windows.ADVAPI32;
+using static Gizmo.RemoteControl.Agent.Shared.Native.Windows.User32;
+
+namespace Gizmo.RemoteControl.Agent.Shared.Native.Windows;
 
 // TODO: Use https://github.com/microsoft/CsWin32 for all p/invokes.
 public class Win32Interop
@@ -27,7 +26,7 @@ public class Win32Interop
             Username = GetUsernameFromSessionId(consoleSessionId)
         });
 
-        nint ppSessionInfo = nint.Zero;
+        var ppSessionInfo = nint.Zero;
         var count = 0;
         var enumSessionResult = WTSAPI32.WTSEnumerateSessions(WTSAPI32.WTS_CURRENT_SERVER_HANDLE, 0, 1, ref ppSessionInfo, ref count);
         var dataSize = Marshal.SizeOf(typeof(WTSAPI32.WTS_SESSION_INFO));
@@ -35,7 +34,7 @@ public class Win32Interop
 
         if (enumSessionResult != 0)
         {
-            for (int i = 0; i < count; i++)
+            for (var i = 0; i < count; i++)
             {
                 var wtsInfo = Marshal.PtrToStructure(current, typeof(WTSAPI32.WTS_SESSION_INFO));
                 if (wtsInfo is null)
@@ -72,8 +71,8 @@ public class Win32Interop
         var inputDesktop = OpenInputDesktop();
         try
         {
-            byte[] deskBytes = new byte[256];
-            if (!GetUserObjectInformationW(inputDesktop, UOI_NAME, deskBytes, 256, out uint lenNeeded))
+            var deskBytes = new byte[256];
+            if (!GetUserObjectInformationW(inputDesktop, UOI_NAME, deskBytes, 256, out var lenNeeded))
             {
                 desktopName = string.Empty;
                 return false;
@@ -139,7 +138,7 @@ public class Win32Interop
 
         // Obtain the process ID of the winlogon process that is running within the currently active session.
         var processes = Process.GetProcessesByName("winlogon");
-        foreach (Process p in processes)
+        foreach (var p in processes)
         {
             if ((uint)p.SessionId == dwSessionId)
             {

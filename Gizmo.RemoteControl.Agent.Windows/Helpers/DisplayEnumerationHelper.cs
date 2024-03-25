@@ -1,13 +1,14 @@
 ﻿using Gizmo.RemoteControl.Shared.Models;
+
 using System.Drawing;
 using System.Numerics;
 using System.Runtime.InteropServices;
 
-namespace Gizmo.RemoteControl.Desktop.Windows.Helpers;
+namespace Gizmo.RemoteControl.Agent.Windows.Helpers;
 
 internal static class DisplaysEnumerationHelper
 {
-    delegate bool EnumMonitorsDelegate(IntPtr hMonitor, IntPtr hdcMonitor, ref RECT lprcMonitor, IntPtr dwData);
+    delegate bool EnumMonitorsDelegate(nint hMonitor, nint hdcMonitor, ref RECT lprcMonitor, nint dwData);
 
     [StructLayout(LayoutKind.Sequential)]
     public struct RECT
@@ -31,21 +32,21 @@ internal static class DisplaysEnumerationHelper
     }
 
     [DllImport("user32.dll")]
-    static extern bool EnumDisplayMonitors(IntPtr hdc, IntPtr lprcClip, EnumMonitorsDelegate lpfnEnum, IntPtr dwData);
+    static extern bool EnumDisplayMonitors(nint hdc, nint lprcClip, EnumMonitorsDelegate lpfnEnum, nint dwData);
 
     [DllImport("user32.dll", CharSet = CharSet.Auto)]
-    static extern bool GetMonitorInfo(IntPtr hMonitor, ref MonitorInfoEx lpmi);
+    static extern bool GetMonitorInfo(nint hMonitor, ref MonitorInfoEx lpmi);
 
     public static IEnumerable<DisplayInfo> GetDisplays()
     {
         var result = new List<DisplayInfo>();
 
-        EnumDisplayMonitors(IntPtr.Zero, IntPtr.Zero,
-            delegate (IntPtr hMonitor, IntPtr hdcMonitor, ref RECT lprcMonitor, IntPtr dwData)
+        EnumDisplayMonitors(nint.Zero, nint.Zero,
+            delegate (nint hMonitor, nint hdcMonitor, ref RECT lprcMonitor, nint dwData)
             {
                 var mi = new MonitorInfoEx();
                 mi.Size = Marshal.SizeOf(mi);
-                bool success = GetMonitorInfo(hMonitor, ref mi);
+                var success = GetMonitorInfo(hMonitor, ref mi);
                 if (success)
                 {
                     var info = new DisplayInfo
@@ -60,7 +61,7 @@ internal static class DisplaysEnumerationHelper
                     result.Add(info);
                 }
                 return true;
-            }, IntPtr.Zero);
+            }, nint.Zero);
         return result;
     }
 }

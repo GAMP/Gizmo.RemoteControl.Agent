@@ -1,11 +1,10 @@
-using Gizmo.RemoteControl.Desktop.Shared.Services;
-using Gizmo.RemoteControl.Shared.Services;
+﻿using Gizmo.RemoteControl.Shared.Services;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Immense.SimpleMessenger;
+using Gizmo.RemoteControl.Agent.Shared.Services;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Startup;
+namespace Gizmo.RemoteControl.Agent.Shared.Startup;
 
 public static class IServiceCollectionExtensions
 {
@@ -27,7 +26,7 @@ public static class IServiceCollectionExtensions
         services.AddSingleton<IIdleTimer, IdleTimer>();
         services.AddSingleton<IImageHelper, ImageHelper>();
         services.AddSingleton<IChatHostService, ChatHostService>();
-        services.AddSingleton(s => WeakReferenceMessenger.Default);
+        //services.AddSingleton(s => WeakReferenceMessenger.Default); // TODO: Remove
         services.AddSingleton<IEnvironmentHelper, EnvironmentHelper>();
         services.AddSingleton<IDtoMessageHandler, DtoMessageHandler>();
         services.AddSingleton<IAppState, AppState>();

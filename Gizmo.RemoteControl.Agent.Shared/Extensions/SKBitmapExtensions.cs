@@ -1,6 +1,6 @@
 ﻿using SkiaSharp;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Extensions;
+namespace Gizmo.RemoteControl.Agent.Shared.Extensions;
 
 public static class SKBitmapExtensions
 {

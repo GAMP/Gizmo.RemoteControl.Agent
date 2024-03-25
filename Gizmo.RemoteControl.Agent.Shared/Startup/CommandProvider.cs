@@ -1,8 +1,10 @@
 using System.CommandLine;
-using CommunityToolkit.Diagnostics;
-using Gizmo.RemoteControl.Desktop.Shared.Enums;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Startup;
+using CommunityToolkit.Diagnostics;
+
+using Gizmo.RemoteControl.Agent.Shared.Enums;
+
+namespace Gizmo.RemoteControl.Agent.Shared.Startup;
 
 public static class CommandProvider
 {

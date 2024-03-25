@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Reactive;
+namespace Gizmo.RemoteControl.Agent.Shared.Reactive;
 
 public class AsyncRelayCommand : ICommand
 {

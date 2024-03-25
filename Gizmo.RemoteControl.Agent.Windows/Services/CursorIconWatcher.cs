@@ -1,13 +1,14 @@
-﻿using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
-using Gizmo.RemoteControl.Desktop.Shared.Native.Windows;
+﻿using Gizmo.RemoteControl.Agent.Shared.Abstractions;
+using Gizmo.RemoteControl.Agent.Shared.Native.Windows;
 using Gizmo.RemoteControl.Shared.Models;
+
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 using System.Runtime.Versioning;
 using System.Timers;
 
-namespace Gizmo.RemoteControl.Desktop.Windows.Services;
+namespace Gizmo.RemoteControl.Agent.Windows.Services;
 
 /// <summary>
 /// A class that can be used to watch for cursor icon changes.

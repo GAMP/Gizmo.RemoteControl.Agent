@@ -1,6 +1,6 @@
-﻿using Gizmo.RemoteControl.Desktop.Shared.Reactive;
+﻿using Gizmo.RemoteControl.Agent.Shared.Reactive;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.ViewModels;
+namespace Gizmo.RemoteControl.Agent.Shared.ViewModels;
 
 public partial class FileUpload : ObservableObject
 {

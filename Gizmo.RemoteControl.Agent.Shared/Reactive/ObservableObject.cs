@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Reactive;
+namespace Gizmo.RemoteControl.Agent.Shared.Reactive;
 
 public class ObservableObject : INotifyPropertyChanged
 {

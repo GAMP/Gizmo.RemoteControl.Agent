@@ -1,17 +1,18 @@
-﻿using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
-using Gizmo.RemoteControl.Desktop.Shared.Messages;
-using Gizmo.RemoteControl.Desktop.Shared.Native.Windows;
+﻿using Gizmo.RemoteControl.Agent.Shared.Abstractions;
+using Gizmo.RemoteControl.Agent.Shared.Messages;
+using Gizmo.RemoteControl.Agent.Shared.Native.Windows;
 using Gizmo.RemoteControl.Shared;
 using Gizmo.RemoteControl.Shared.Enums;
 using Gizmo.RemoteControl.Shared.Interfaces;
 using Gizmo.RemoteControl.Shared.Models;
-using Immense.SimpleMessenger;
+
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+
 using System.Diagnostics;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Services;
+namespace Gizmo.RemoteControl.Agent.Shared.Services;
 
 public interface IDesktopHubConnection
 {

@@ -1,14 +1,15 @@
-using Gizmo.RemoteControl.Desktop.Shared.Messages;
+﻿using Gizmo.RemoteControl.Agent.Shared.Abstractions;
+using Gizmo.RemoteControl.Agent.Shared.Messages;
 using Gizmo.RemoteControl.Shared.Enums;
-using Immense.SimpleMessenger;
-using Microsoft.Extensions.Hosting;
+
 using Microsoft.Extensions.Logging;
 using Microsoft.Win32;
+
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Runtime.Versioning;
 
-namespace Gizmo.RemoteControl.Desktop.Windows.Services;
+namespace Gizmo.RemoteControl.Agent.Windows.Services;
 
 public interface IMessageLoop
 {
@@ -51,7 +52,7 @@ public class MessageLoop : IMessageLoop
             {
                 try
                 {
-                    while (GetMessage(out var msg, IntPtr.Zero, 0, 0) > 0)
+                    while (GetMessage(out var msg, nint.Zero, 0, 0) > 0)
                     {
                         DispatchMessage(ref msg);
                     }
@@ -74,7 +75,7 @@ public class MessageLoop : IMessageLoop
     private static extern bool DispatchMessage([In] ref MSG lpmsg);
 
     [DllImport("user32.dll")]
-    private static extern int GetMessage(out MSG lpMsg, IntPtr hWnd, uint wMsgFilterMin, uint wMsgFilterMax);
+    private static extern int GetMessage(out MSG lpMsg, nint hWnd, uint wMsgFilterMin, uint wMsgFilterMax);
 
 
     private void SystemEvents_DisplaySettingsChanged(object? sender, EventArgs e)
@@ -100,10 +101,10 @@ public class MessageLoop : IMessageLoop
     [StructLayout(LayoutKind.Sequential)]
     private struct MSG
     {
-        public IntPtr hwnd;
+        public nint hwnd;
         public uint message;
-        public IntPtr wParam;
-        public IntPtr lParam;
+        public nint wParam;
+        public nint lParam;
         public uint time;
         public POINT pt;
     }

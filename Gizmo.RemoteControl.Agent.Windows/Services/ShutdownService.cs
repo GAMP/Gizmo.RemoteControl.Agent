@@ -1,10 +1,10 @@
-using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
-using Gizmo.RemoteControl.Desktop.Shared.Services;
+using Gizmo.RemoteControl.Agent.Shared.Abstractions;
+using Gizmo.RemoteControl.Agent.Shared.Services;
 using Gizmo.RemoteControl.Shared.Extensions;
-using Microsoft.Extensions.Hosting;
+
 using Microsoft.Extensions.Logging;
 
-namespace Gizmo.RemoteControl.Desktop.Windows.Services;
+namespace Gizmo.RemoteControl.Agent.Windows.Services;
 
 public class ShutdownService : IShutdownService
 {

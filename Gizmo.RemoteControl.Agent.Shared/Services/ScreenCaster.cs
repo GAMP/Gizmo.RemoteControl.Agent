@@ -1,16 +1,15 @@
-using SkiaSharp;
+﻿using SkiaSharp;
 using Gizmo.RemoteControl.Shared.Models;
 using Microsoft.Extensions.Logging;
 using Gizmo.RemoteControl.Shared.Helpers;
 using Gizmo.RemoteControl.Shared.Models.Dtos;
 using Gizmo.RemoteControl.Shared.Services;
 using Microsoft.IO;
-using Immense.SimpleMessenger;
-using Gizmo.RemoteControl.Desktop.Shared.Messages;
-using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
-using Gizmo.RemoteControl.Desktop.Shared.Enums;
+using Gizmo.RemoteControl.Agent.Shared.Messages;
+using Gizmo.RemoteControl.Agent.Shared.Abstractions;
+using Gizmo.RemoteControl.Agent.Shared.Enums;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Services;
+namespace Gizmo.RemoteControl.Agent.Shared.Services;
 
 public interface IScreenCaster : IAsyncDisposable
 {

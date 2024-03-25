@@ -1,7 +1,6 @@
-﻿using System;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Native.Windows;
+namespace Gizmo.RemoteControl.Agent.Shared.Native.Windows;
 
 public static class GDI32
 {

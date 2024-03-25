@@ -1,6 +1,7 @@
-﻿using Gizmo.RemoteControl.Desktop.Shared.Native.Windows;
+﻿using Gizmo.RemoteControl.Agent.Shared.Native.Windows;
+
 using Microsoft.Win32.SafeHandles;
-using System;
+
 using System.Runtime.InteropServices;
 using System.Runtime.Versioning;
 

@@ -1,10 +1,12 @@
-﻿using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
+﻿using Gizmo.RemoteControl.Agent.Shared.Abstractions;
 using Gizmo.RemoteControl.Shared.Models;
+
 using Microsoft.Extensions.Logging;
+
 using System.IO.Pipes;
 using System.Text.Json;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Services;
+namespace Gizmo.RemoteControl.Agent.Shared.Services;
 
 public interface IChatHostService
 {

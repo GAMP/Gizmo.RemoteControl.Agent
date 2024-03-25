@@ -29,7 +29,7 @@
 
 using System.Runtime.InteropServices;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Native.Linux;
+namespace Gizmo.RemoteControl.Agent.Shared.Native.Linux;
 
 public static class LibXrandr
 {

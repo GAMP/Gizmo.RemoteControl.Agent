@@ -1,4 +1,4 @@
-﻿using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
+﻿using Gizmo.RemoteControl.Agent.Shared.Abstractions;
 using Gizmo.RemoteControl.Shared.Enums;
 
 using Microsoft.Extensions.Logging;

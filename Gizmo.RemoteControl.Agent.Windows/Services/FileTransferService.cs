@@ -1,8 +1,8 @@
-﻿using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
-using Gizmo.RemoteControl.Desktop.Shared.Services;
-using Gizmo.RemoteControl.Desktop.Shared.ViewModels;
+﻿using Gizmo.RemoteControl.Agent.Shared.Abstractions;
+using Gizmo.RemoteControl.Agent.Shared.Services;
+using Gizmo.RemoteControl.Agent.Shared.ViewModels;
 
-namespace Gizmo.RemoteControl.Desktop.Windows.Services;
+namespace Gizmo.RemoteControl.Agent.Windows.Services;
 
 public class FileTransferService : IFileTransferService
 {

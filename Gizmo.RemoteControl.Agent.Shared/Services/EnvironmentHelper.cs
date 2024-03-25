@@ -1,7 +1,8 @@
-﻿using Gizmo.RemoteControl.Desktop.Shared.Native.Linux;
+﻿using Gizmo.RemoteControl.Agent.Shared.Native.Linux;
+
 using System.Security.Principal;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Services;
+namespace Gizmo.RemoteControl.Agent.Shared.Services;
 
 /// <summary>
 /// Environment parameters helper.

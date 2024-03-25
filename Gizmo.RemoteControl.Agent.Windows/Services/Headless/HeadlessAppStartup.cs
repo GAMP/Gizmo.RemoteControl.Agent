@@ -1,10 +1,9 @@
-﻿using Gizmo.RemoteControl.Desktop.Windows.Services;
-using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
-using Gizmo.RemoteControl.Desktop.Shared.Enums;
-using Gizmo.RemoteControl.Desktop.Shared.Native.Windows;
-using Gizmo.RemoteControl.Desktop.Shared.Services;
+﻿using Gizmo.RemoteControl.Agent.Shared.Abstractions;
+using Gizmo.RemoteControl.Agent.Shared.Enums;
+using Gizmo.RemoteControl.Agent.Shared.Native.Windows;
+using Gizmo.RemoteControl.Agent.Shared.Services;
 using Gizmo.RemoteControl.Shared.Models;
-using Microsoft.Extensions.Hosting;
+
 using Microsoft.Extensions.Logging;
 
 namespace Gizmo.RemoteControl.Agent.Windows.Services.Headless;

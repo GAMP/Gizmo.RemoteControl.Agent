@@ -1,6 +1,6 @@
 ﻿using Gizmo.RemoteControl.Shared.Enums;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Messages;
+namespace Gizmo.RemoteControl.Agent.Shared.Messages;
 
 public class WindowsSessionEndingMessage
 {

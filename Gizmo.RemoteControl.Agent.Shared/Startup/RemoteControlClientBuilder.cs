@@ -1,7 +1,8 @@
-﻿using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
+﻿using Gizmo.RemoteControl.Agent.Shared.Abstractions;
+
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Startup;
+namespace Gizmo.RemoteControl.Agent.Shared.Startup;
 
 public interface IRemoteControlClientBuilder
 {

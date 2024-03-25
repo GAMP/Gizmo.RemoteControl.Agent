@@ -1,15 +1,17 @@
-using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
-using Gizmo.RemoteControl.Desktop.Shared.Enums;
-using Gizmo.RemoteControl.Desktop.Shared.Native.Windows;
-using Gizmo.RemoteControl.Desktop.Shared.Services;
+using Gizmo.RemoteControl.Agent.Shared.Abstractions;
+using Gizmo.RemoteControl.Agent.Shared.Enums;
+using Gizmo.RemoteControl.Agent.Shared.Native.Windows;
+using Gizmo.RemoteControl.Agent.Shared.Services;
 using Gizmo.RemoteControl.Shared;
+
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+
 using System.CommandLine;
 using System.CommandLine.NamingConventionBinder;
 using System.Runtime.Versioning;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Startup;
+namespace Gizmo.RemoteControl.Agent.Shared.Startup;
 
 public static class IServiceProviderExtensions
 {
@@ -32,7 +34,7 @@ public static class IServiceProviderExtensions
         try
         {
             var logger = services.GetRequiredService<ILogger<IServiceProvider>>();
-            TaskScheduler.UnobservedTaskException += (object? sender, UnobservedTaskExceptionEventArgs e) =>
+            TaskScheduler.UnobservedTaskException += (sender, e) =>
             {
                 HandleUnobservedTask(e, logger);
             };
@@ -66,7 +68,7 @@ public static class IServiceProviderExtensions
         {
             return Result.Fail(ex);
         }
-       
+
     }
 
     /// <summary>
@@ -137,7 +139,7 @@ public static class IServiceProviderExtensions
     // This shouldn't be required in modern .NET to prevent the app from crashing,
     // but it could be useful to log it.
     private static void HandleUnobservedTask(
-        UnobservedTaskExceptionEventArgs e, 
+        UnobservedTaskExceptionEventArgs e,
         ILogger<IServiceProvider> logger)
     {
         e.SetObserved();

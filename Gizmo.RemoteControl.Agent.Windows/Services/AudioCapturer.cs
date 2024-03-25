@@ -1,8 +1,10 @@
-﻿using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
+﻿using Gizmo.RemoteControl.Agent.Shared.Abstractions;
+
 using Microsoft.Extensions.Logging;
+
 using NAudio.Wave;
 
-namespace Gizmo.RemoteControl.Desktop.Windows.Services;
+namespace Gizmo.RemoteControl.Agent.Windows.Services;
 
 public class AudioCapturer : IAudioCapturer
 {

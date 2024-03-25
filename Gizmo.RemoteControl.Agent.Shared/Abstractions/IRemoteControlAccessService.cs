@@ -1,6 +1,6 @@
 ﻿using Gizmo.RemoteControl.Shared.Enums;
 
-namespace Gizmo.RemoteControl.Desktop.Shared.Abstractions;
+namespace Gizmo.RemoteControl.Agent.Shared.Abstractions;
 
 public interface IRemoteControlAccessService
 {

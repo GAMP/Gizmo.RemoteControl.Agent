@@ -1,4 +1,4 @@
-﻿namespace Gizmo.RemoteControl.Desktop.Shared;
+﻿namespace Gizmo.RemoteControl.Agent.Shared;
 
 public static class StaticServiceProvider
 {

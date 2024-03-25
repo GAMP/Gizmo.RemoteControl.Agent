@@ -1,6 +1,6 @@
-﻿using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
-using Gizmo.RemoteControl.Desktop.Shared.Services;
-using Gizmo.RemoteControl.Desktop.Shared.ViewModels;
+﻿using Gizmo.RemoteControl.Agent.Shared.Abstractions;
+using Gizmo.RemoteControl.Agent.Shared.Services;
+using Gizmo.RemoteControl.Agent.Shared.ViewModels;
 
 using Microsoft.Extensions.Logging;
 

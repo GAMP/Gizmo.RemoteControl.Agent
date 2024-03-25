@@ -1,17 +1,15 @@
-﻿using Gizmo.RemoteControl.Desktop.Shared.Abstractions;
-using Gizmo.RemoteControl.Desktop.Shared;
-using Gizmo.RemoteControl.Desktop.Shared.Services;
-using Gizmo.RemoteControl.Shared;
+﻿using Gizmo.RemoteControl.Shared;
 using Gizmo.RemoteControl.Shared.Services;
-using Immense.SimpleMessenger;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.DependencyInjection;
 using System.Runtime.Versioning;
 using Microsoft.Extensions.Logging;
-using Agent.Headless.Services;
-using Gizmo.RemoteControl.Desktop.Windows.Services;
-using Microsoft.Extensions.Hosting;
 using Gizmo.RemoteControl.Agent.Windows.Services.Headless;
+using Gizmo.RemoteControl.Agent.Windows.Services;
+using Gizmo.RemoteControl.Agent.Shared.Services;
+using Gizmo.RemoteControl.Agent.Shared.Abstractions;
+using Gizmo.RemoteControl.Agent.Shared;
+using Gizmo.RemoteControl.Agent.Shared.Enums;
 
 namespace Gizmo.RemoteControl.Agent.Windows;
 
@@ -34,7 +32,7 @@ public static class Extensions
         services.AddSingleton<IIdleTimer, IdleTimer>();
         services.AddSingleton<IImageHelper, ImageHelper>();
         services.AddSingleton<IChatHostService, ChatHostService>();
-        services.AddSingleton(s => WeakReferenceMessenger.Default);
+        services.AddSingleton<IMessenger, WindowsMessenger>();
         services.AddSingleton<IDtoMessageHandler, DtoMessageHandler>();
         services.AddTransient<IHubConnectionBuilder>(s => new HubConnectionBuilder());
         services.AddSingleton<IAppState, AppState>();
@@ -67,7 +65,7 @@ public static class Extensions
         var appState = services.GetRequiredService<IAppState>();
 
         appState.Configure(host,
-            Desktop.Shared.Enums.AppMode.Unattended,
+            AppMode.Unattended,
             sessionId,
             accessKey,
             string.Empty,

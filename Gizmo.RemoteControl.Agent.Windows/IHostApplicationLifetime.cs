@@ -1,4 +1,4 @@
-﻿namespace Microsoft.Extensions.Hosting;
+﻿namespace Gizmo.RemoteControl.Agent.Windows;
 
 public interface IHostApplicationLifetime
 {
