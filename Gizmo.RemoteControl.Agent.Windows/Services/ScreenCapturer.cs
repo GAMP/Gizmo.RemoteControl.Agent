@@ -363,7 +363,7 @@ public class ScreenCapturer : IScreenCapturer
         return DxCaptureResult.Fail("Failed to get DirectX frame.");
     }
 
-    private Task HandleDisplaySettingsChanged(DisplaySettingsChangedMessage message)
+    private Task HandleDisplaySettingsChanged(object _, DisplaySettingsChangedMessage message)
     {
         _needsInit = true;
         return Task.CompletedTask;

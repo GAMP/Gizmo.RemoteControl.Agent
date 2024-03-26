@@ -11,7 +11,7 @@ using Gizmo.RemoteControl.Agent.Shared.Enums;
 
 namespace Gizmo.RemoteControl.Agent.Shared.Services;
 
-public interface IScreenCaster : IAsyncDisposable
+public interface IScreenCaster : IDisposable
 {
     Task BeginScreenCasting(ScreenCastRequest screenCastRequest);
 }
@@ -28,7 +28,7 @@ public class ScreenCaster : IScreenCaster
     private readonly IShutdownService _shutdownService;
     private readonly ISystemTime _systemTime;
     private readonly IViewerFactory _viewerFactory;
-    private readonly List<Task<IAsyncDisposable>> _messengerRegistrations = new();
+    private readonly List<IDisposable> _messengerRegistrations = new();
     private bool _isWindowsSessionEnding;
 
     public ScreenCaster(
@@ -63,14 +63,13 @@ public class ScreenCaster : IScreenCaster
         await BeginScreenCastingImpl(screenCastRequest).ConfigureAwait(false);
     }
 
-    public async ValueTask DisposeAsync()
+    public void Dispose()
     {
-        foreach (var task in _messengerRegistrations)
+        foreach (var messenger in _messengerRegistrations)
         {
             try
             {
-                var registration = await task;
-                await registration.DisposeAsync();
+                messenger.Dispose();
             }
             catch { }
         }
@@ -236,14 +235,14 @@ public class ScreenCaster : IScreenCaster
 
     }
 
-    private Task HandleWindowsSessionEndingMessage(WindowsSessionEndingMessage arg)
+    private Task HandleWindowsSessionEndingMessage(object _, WindowsSessionEndingMessage arg)
     {
         _logger.LogInformation("Windows session ending.  Stopping screen cast.");
         _isWindowsSessionEnding = true;
         return Task.CompletedTask;
     }
 
-    private Task HandleWindowsSessionSwitchedMessage(WindowsSessionSwitchedMessage arg)
+    private Task HandleWindowsSessionSwitchedMessage(object _, WindowsSessionSwitchedMessage arg)
     {
         _logger.LogInformation("Windows session switched.  Stopping screen cast.");
         _isWindowsSessionEnding = true;
