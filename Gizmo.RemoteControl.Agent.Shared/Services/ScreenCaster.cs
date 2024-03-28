@@ -5,9 +5,9 @@ using Gizmo.RemoteControl.Shared.Helpers;
 using Gizmo.RemoteControl.Shared.Models.Dtos;
 using Gizmo.RemoteControl.Shared.Services;
 using Microsoft.IO;
-using Gizmo.RemoteControl.Agent.Shared.Messages;
 using Gizmo.RemoteControl.Agent.Shared.Abstractions;
 using Gizmo.RemoteControl.Agent.Shared.Enums;
+using Gizmo.RemoteControl.Agent.Shared.Services.Messenger.Messages;
 
 namespace Gizmo.RemoteControl.Agent.Shared.Services;
 

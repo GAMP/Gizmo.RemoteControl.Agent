@@ -1,4 +1,4 @@
-﻿namespace Gizmo.RemoteControl.Agent.Shared.Messages;
+﻿namespace Gizmo.RemoteControl.Agent.Shared.Services.Messenger.Messages;
 
 public class AppStateHostChangedMessage
 {

@@ -1,5 +1,5 @@
 ﻿using Gizmo.RemoteControl.Agent.Shared.Abstractions;
-using Gizmo.RemoteControl.Agent.Shared.Messages;
+using Gizmo.RemoteControl.Agent.Shared.Services.Messenger.Messages;
 using Gizmo.RemoteControl.Shared.Enums;
 
 using Microsoft.Extensions.Logging;

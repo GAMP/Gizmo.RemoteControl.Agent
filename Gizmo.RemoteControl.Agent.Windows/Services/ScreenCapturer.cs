@@ -38,10 +38,10 @@ using System.Runtime.Versioning;
 using Result = Gizmo.RemoteControl.Shared.Result;
 using Gizmo.RemoteControl.Agent.Windows.Models;
 using Gizmo.RemoteControl.Agent.Windows.Helpers;
-using Gizmo.RemoteControl.Agent.Shared.Messages;
 using Gizmo.RemoteControl.Agent.Shared.Native.Windows;
 using Gizmo.RemoteControl.Agent.Shared.Services;
 using Gizmo.RemoteControl.Agent.Shared.Abstractions;
+using Gizmo.RemoteControl.Agent.Shared.Services.Messenger.Messages;
 
 namespace Gizmo.RemoteControl.Agent.Windows.Services;
 

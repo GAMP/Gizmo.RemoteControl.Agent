@@ -1,4 +1,4 @@
-using Gizmo.RemoteControl.Agent.Shared.Abstractions;
+﻿using Gizmo.RemoteControl.Agent.Shared.Abstractions;
 using Gizmo.RemoteControl.Agent.Shared.Enums;
 using Gizmo.RemoteControl.Agent.Shared.Native.Windows;
 using Gizmo.RemoteControl.Agent.Shared.Services;

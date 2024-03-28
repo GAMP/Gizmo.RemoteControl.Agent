@@ -1,10 +1,9 @@
 ﻿using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
-
 using Gizmo.RemoteControl.Agent.Shared.Abstractions;
 
-namespace Gizmo.RemoteControl.Agent.Windows.Services.Messenger
+namespace Gizmo.RemoteControl.Agent.Shared.Services.Messenger.Private
 {
     class WeakReferenceTable
     {

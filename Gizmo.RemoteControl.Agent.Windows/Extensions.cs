@@ -33,7 +33,7 @@ public static class Extensions
         services.AddSingleton<IIdleTimer, IdleTimer>();
         services.AddSingleton<IImageHelper, ImageHelper>();
         services.AddSingleton<IChatHostService, ChatHostService>();
-        services.AddSingleton<IMessenger, WindowsMessenger>();
+        services.AddSingleton<IMessenger, MessengerService>();
         services.AddSingleton<IDtoMessageHandler, DtoMessageHandler>();
         services.AddTransient<IHubConnectionBuilder>(s => new HubConnectionBuilder());
         services.AddSingleton<IAppState, AppState>();

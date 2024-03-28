@@ -1,4 +1,4 @@
-﻿namespace Gizmo.RemoteControl.Agent.Windows.Services.Messenger
+﻿namespace Gizmo.RemoteControl.Agent.Shared.Services.Messenger.Private
 {
     /// <summary>
     /// A dictionary key composed of the message type and channel type.

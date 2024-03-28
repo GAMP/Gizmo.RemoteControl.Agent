@@ -1,4 +1,4 @@
-﻿namespace Gizmo.RemoteControl.Agent.Windows.Services.Messenger
+﻿namespace Gizmo.RemoteControl.Agent.Shared.Services.Messenger.Private
 {
     readonly struct DefaultChannel : IEquatable<DefaultChannel>
     {

@@ -2,46 +2,12 @@
 using System.Collections.Immutable;
 
 using Gizmo.RemoteControl.Agent.Shared.Abstractions;
+using Gizmo.RemoteControl.Agent.Shared.Services.Messenger.Private;
 
 namespace Gizmo.RemoteControl.Agent.Windows.Services.Messenger
 {
-    class RegistrationToken : IDisposable
-    {
-        private readonly Action _disposalAction;
-        private bool _disposedValue;
-
-        public RegistrationToken(Action disposalAction)
-        {
-            _disposalAction = disposalAction;
-        }
-
-        public void Dispose()
-        {
-            Dispose(disposing: true);
-            GC.SuppressFinalize(this);
-        }
-
-        private void Dispose(bool disposing)
-        {
-            if (!_disposedValue)
-            {
-                if (disposing)
-                {
-                    try
-                    {
-                        _disposalAction();
-                    }
-                    catch
-                    {
-                        // Ignore errors.
-                    }
-                }
-                _disposedValue = true;
-            }
-        }
-    }
-
-    public sealed class WindowsMessenger : IMessenger
+    /// <inheritdoc />
+    public sealed class MessengerService : IMessenger
     {
         private readonly SemaphoreSlim _registrationLock = new(1, 1);
         private readonly ConcurrentDictionary<CompositeKey, ConcurrentDictionary<object, WeakReferenceTable>> _subscribers = new();

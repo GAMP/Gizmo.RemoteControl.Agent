@@ -1,9 +1,9 @@
-﻿using Gizmo.RemoteControl.Agent.Shared.Messages;
-using Gizmo.RemoteControl.Shared.Models;
+﻿using Gizmo.RemoteControl.Shared.Models;
 using Microsoft.Extensions.Logging;
 using System.Collections.Concurrent;
 using Gizmo.RemoteControl.Agent.Shared.Enums;
 using Gizmo.RemoteControl.Agent.Shared.Abstractions;
+using Gizmo.RemoteControl.Agent.Shared.Services.Messenger.Messages;
 
 namespace Gizmo.RemoteControl.Agent.Shared.Services;
 
